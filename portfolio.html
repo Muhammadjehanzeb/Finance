@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="home-button" onclick="location.href='index.html'">Home</button>
+        <h2>Stocks Portfolio</h2>
+
+        <form id="stockForm">
+            <label for="symbol">Stock Symbol:</label>
+            <input type="text" id="symbol" required>
+
+            <label for="name">Stock Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="quantity">Total Quantity:</label>
+            <input type="number" id="quantity" required>
+
+            <label for="price">Purchasing Price (PKR):</label>
+            <input type="number" id="price" step="0.01" required>
+
+            <label for="date">Purchasing Date:</label>
+            <input type="date" id="date" required>
+
+            <button type="button" onclick="addStock()">Add Stock</button>
+        </form>
+
+        <div id="portfolio">
+            <h3>Your Stocks:</h3>
+            <table id="portfolioTable">
+                <thead>
+                    <tr>
+                        <th>Symbol</th>
+                        <th>Name</th>
+                        <th>Total Quantity</th>
+                        <th>Purchasing Price (PKR)</th>
+                        <th>Purchasing Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Stock entries will be dynamically injected here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
